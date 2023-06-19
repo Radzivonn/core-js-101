@@ -44,9 +44,7 @@ function getComposition(/* f, g */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
-}
+const getPowerFunction = (exponent) => (num) => num ** exponent;
 
 
 /**
@@ -81,9 +79,10 @@ function getPolynom() {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
-function memoize(/* func */) {
-  throw new Error('Not implemented');
-}
+const memoize = (func) => {
+  const memo = func();
+  return () => memo;
+};
 
 
 /**
